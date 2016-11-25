@@ -1,0 +1,5 @@
+LICEN*
+src/*.js.map
+src/*/*.js.map
+src/*.js
+src/*/*.js

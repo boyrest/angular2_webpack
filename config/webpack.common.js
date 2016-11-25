@@ -28,13 +28,13 @@ module.exports = {
       test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
       loader: 'file?name=assets/[name].[hash].[ext]'
     }, {
-      test: /\.css$/,
+      test: /\.scss$/,
       exclude: helpers.root('src', 'app'),
-      loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+      loader: ExtractTextPlugin.extract('style', 'css!sass?sourceMap')
     }, {
-      test: /\.css$/,
+      test: /\.scss$/,
       include: helpers.root('src', 'app'),
-      loader: 'raw'
+      loaders: ['raw', 'sass']
     }]
   },
 
