@@ -1,0 +1,16 @@
+app-header {
+    height: 60px;
+}
+
+app-footer {
+    height: 60px;
+}
+
+router-outlet {
+    display: block;
+    height: calc(100% - 180px);
+}
+
+.navbar-header {
+    height: 60px;
+}
