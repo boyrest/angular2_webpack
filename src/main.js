@@ -5,5 +5,5 @@ var app_module_1 = require("./app/app.module");
 if (process.env.ENV === 'production') {
     core_1.enableProdMode();
 }
-platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.RoutesDemoAppModule);
 //# sourceMappingURL=main.js.map
