@@ -6,9 +6,9 @@ app-footer {
     height: 60px;
 }
 
-router-outlet {
+main {
     display: block;
-    height: calc(100% - 180px);
+    height: calc(100% - 120px);
 }
 
 .navbar-header {

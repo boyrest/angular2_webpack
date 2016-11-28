@@ -1,8 +1,10 @@
 <app-header></app-header>
-<ul class="navbar-header">
-    <li><a [routerLink]="['home']">Home</a></li>
-    <li><a [routerLink]="['about']">About</a></li>
-    <li><a [routerLink]="['contact']">Contact us</a></li>
-</ul>
-<router-outlet></router-outlet>
+<main>
+    <ul class="navbar-header">
+        <li><a [routerLink]="['home']">Home</a></li>
+        <li><a [routerLink]="['about']">About</a></li>
+        <li><a [routerLink]="['contact']">Contact us</a></li>
+    </ul>
+    <router-outlet></router-outlet>
+</main>
 <app-footer></app-footer>
