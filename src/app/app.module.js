@@ -15,7 +15,9 @@ var common_1 = require("@angular/common");
 var HomeComponent_1 = require("./component/home/HomeComponent");
 var AboutComponent_1 = require("./component/about/AboutComponent");
 var ContactComponent_1 = require("./component/contact/ContactComponent");
-var RoutesDemoApp_1 = require("./component/RoutesDemoApp");
+var app_component_1 = require("./component/app/app.component");
+var footer_component_1 = require("./component/footer/footer.component");
+var header_component_1 = require("./component/header/header.component");
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent_1.HomeComponent },
@@ -35,12 +37,14 @@ RoutesDemoAppModule = __decorate([
             router_1.RouterModule.forRoot(routes)
         ],
         declarations: [
-            RoutesDemoApp_1.RoutesDemoApp,
+            app_component_1.AppComponent,
             HomeComponent_1.HomeComponent,
             AboutComponent_1.AboutComponent,
-            ContactComponent_1.ContactComponent
+            ContactComponent_1.ContactComponent,
+            footer_component_1.AppFooter,
+            header_component_1.AppHeader
         ],
-        bootstrap: [RoutesDemoApp_1.RoutesDemoApp],
+        bootstrap: [app_component_1.AppComponent],
         providers: [
             { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
         ]

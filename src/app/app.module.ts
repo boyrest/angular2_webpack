@@ -5,7 +5,9 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {HomeComponent} from './component/home/HomeComponent';
 import {AboutComponent} from './component/about/AboutComponent';
 import {ContactComponent} from './component/contact/ContactComponent';
-import {RoutesDemoApp} from './component/RoutesDemoApp';
+import {AppComponent} from './component/app/app.component';
+import {AppFooter} from './component/footer/footer.component';
+import {AppHeader} from './component/header/header.component';
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
@@ -20,12 +22,14 @@ const routes: Routes = [
         RouterModule.forRoot(routes)
     ],
     declarations: [
-        RoutesDemoApp,
+        AppComponent,
         HomeComponent,
         AboutComponent,
-        ContactComponent
+        ContactComponent,
+        AppFooter,
+        AppHeader
     ],
-    bootstrap: [RoutesDemoApp],
+    bootstrap: [AppComponent],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy }
     ]
