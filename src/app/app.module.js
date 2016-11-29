@@ -21,9 +21,8 @@ var header_component_1 = require("./component/header/header.component");
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent_1.HomeComponent },
-    { path: 'about', component: AboutComponent_1.AboutComponent },
-    { path: 'contact', component: ContactComponent_1.ContactComponent },
-    { path: 'contactus', redirectTo: 'contact' }
+    { path: 'about/:id', component: AboutComponent_1.AboutComponent },
+    { path: 'contact', component: ContactComponent_1.ContactComponent }
 ];
 var RoutesDemoAppModule = (function () {
     function RoutesDemoAppModule() {
