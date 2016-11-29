@@ -2,3 +2,7 @@
   {{id}}
   {{description}}
 </h1>
+<ul>
+    <li *ngFor="let name of names">Hello {{name}}</li>
+    <app-user-item *ngFor="let name of userNames" [name]="name"></app-user-item>
+</ul>

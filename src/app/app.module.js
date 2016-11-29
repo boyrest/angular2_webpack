@@ -18,6 +18,7 @@ var ContactComponent_1 = require("./component/contact/ContactComponent");
 var app_component_1 = require("./component/app/app.component");
 var footer_component_1 = require("./component/footer/footer.component");
 var header_component_1 = require("./component/header/header.component");
+var app_user_item_1 = require("./component/common/list/app.user.item");
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent_1.HomeComponent },
@@ -41,7 +42,8 @@ RoutesDemoAppModule = __decorate([
             AboutComponent_1.AboutComponent,
             ContactComponent_1.ContactComponent,
             footer_component_1.AppFooter,
-            header_component_1.AppHeader
+            header_component_1.AppHeader,
+            app_user_item_1.UserItem
         ],
         bootstrap: [app_component_1.AppComponent],
         providers: [

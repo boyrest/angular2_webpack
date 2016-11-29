@@ -7,8 +7,10 @@ import {ActivatedRoute} from '@angular/router';
 export class AboutComponent {
   id:string;
   description:string;
+  userNames:string[];
   constructor(private route:ActivatedRoute){
     route.params.subscribe(param =>{this.id = param['id'];});
     this.description = "Hello everyone,let's go start this angular2 project";
+    this.userNames = ['Lily','Tom','Chary'];
   }
 }
