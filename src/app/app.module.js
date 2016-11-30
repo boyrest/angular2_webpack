@@ -19,11 +19,15 @@ var app_component_1 = require("./component/app/app.component");
 var footer_component_1 = require("./component/footer/footer.component");
 var header_component_1 = require("./component/header/header.component");
 var app_user_item_1 = require("./component/common/list/app.user.item");
+var form_component_1 = require("./component/form/form.component");
+var forms_1 = require("@angular/forms");
+var article_component_1 = require("./component/form/article/article.component");
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent_1.HomeComponent },
     { path: 'about/:id', component: AboutComponent_1.AboutComponent },
-    { path: 'contact', component: ContactComponent_1.ContactComponent }
+    { path: 'contact', component: ContactComponent_1.ContactComponent },
+    { path: 'form', component: form_component_1.FormIndexComponent }
 ];
 var RoutesDemoAppModule = (function () {
     function RoutesDemoAppModule() {
@@ -34,7 +38,8 @@ RoutesDemoAppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            router_1.RouterModule.forRoot(routes)
+            router_1.RouterModule.forRoot(routes),
+            forms_1.FormsModule
         ],
         declarations: [
             app_component_1.AppComponent,
@@ -43,7 +48,9 @@ RoutesDemoAppModule = __decorate([
             ContactComponent_1.ContactComponent,
             footer_component_1.AppFooter,
             header_component_1.AppHeader,
-            app_user_item_1.UserItem
+            app_user_item_1.UserItem,
+            form_component_1.FormIndexComponent,
+            article_component_1.ArticleComponent
         ],
         bootstrap: [app_component_1.AppComponent],
         providers: [

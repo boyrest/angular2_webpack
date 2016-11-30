@@ -1,0 +1,17 @@
+<div class="article-left">
+    <div class="ui statistic">
+        <div class="value">{{article.votes}}</div>
+        <div class="label"> Points </div>
+    </div>
+</div>
+<div class="article-right">
+    <a class="ui large header" href="{{ article.link }}">{{title}}</a>
+    <ul>
+        <li class="item">
+            <a href (click)="voteUp()">upvote </a>
+        </li>
+        <li class="item">
+            <a href (click)="voteDown()">downvote </a>
+        </li>
+    </ul>
+</div>
