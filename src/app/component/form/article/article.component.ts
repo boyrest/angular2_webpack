@@ -1,27 +1,32 @@
-import {Component} from '@angular/core';
+import {Component,EventEmitter} from '@angular/core';
 import '../../../../../public/css/styles.scss';
 import { Article } from '../../../model/Article';
 
 @Component({
-  selector: 'app-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss'],
-  host: {
-      class: 'row'
-  }
+    selector: 'app-article',
+    templateUrl: './article.component.html',
+    styleUrls: ['./article.component.scss'],
+    inputs: ['article'],
+    outputs: ['articleEmit'],
+    host: {
+        class: 'row'
+    }
 })
 
 export class ArticleComponent {
     article: Article;
+    articleEmit: EventEmitter<Article>;
     constructor() {
-        this.article = new Article("Angular 2","www.baidu.com",10);
+        this.articleEmit = new EventEmitter<Article>();
     }
     voteUp() {
-        this.article.votes += 1;
+        this.article.voteUp();
+        this.articleEmit.emit(this.article);
         return false;
     }
     voteDown() {
-        this.article.votes -= 1;
+        this.article.voteDown();
+        this.articleEmit.emit(this.article);
         return false;
     }
 
