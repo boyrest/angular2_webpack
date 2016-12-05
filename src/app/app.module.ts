@@ -11,20 +11,24 @@ import {AppHeader} from './component/header/header.component';
 import {UserItem} from './component/common/list/app.user.item';
 import {FormIndexComponent} from './component/form/form.component';
 import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 import {ArticleComponent} from './component/form/article/article.component';
+import {HeroFormComponent} from './component/hero/hero-form.component';
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'about/:id', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
-    { path: 'form', component: FormIndexComponent }
+    { path: 'form', component: FormIndexComponent },
+    { path: 'hero', component: HeroFormComponent }
 ]
 
 @NgModule({
     imports: [
         BrowserModule,
         RouterModule.forRoot(routes),
-        FormsModule
+        FormsModule,
+        HttpModule
     ],
     declarations: [
         AppComponent,
@@ -35,7 +39,8 @@ const routes: Routes = [
         AppHeader,
         UserItem,
         FormIndexComponent,
-        ArticleComponent
+        ArticleComponent,
+        HeroFormComponent
     ],
     bootstrap: [AppComponent],
     providers: [

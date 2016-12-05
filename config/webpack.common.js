@@ -35,6 +35,9 @@ module.exports = {
       test: /\.scss$/,
       include: helpers.root('src', 'app'),
       loaders: ['raw', 'sass']
+    }, {
+      test: /bootstrap\/dist\/js\/umd\//,
+      loader: 'imports?jQuery=jquery'
     }]
   },
 
@@ -42,7 +45,11 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
-
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })

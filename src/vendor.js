@@ -9,5 +9,8 @@ require("@angular/router");
 // RxJS
 require("rxjs");
 // Other vendors for example jQuery, Lodash or Bootstrap
+require("jquery");
+require("lodash");
+require("bootstrap-loader");
 // You can import js, ts, css, sass, ...
 //# sourceMappingURL=vendor.js.map

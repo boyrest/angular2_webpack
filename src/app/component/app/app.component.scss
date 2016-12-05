@@ -1,16 +1,19 @@
 app-header {
     height: 60px;
+    background: rgb(121, 119, 255);
 }
 
 app-footer {
-    height: 60px;
+    height: 90px;
+    background: rgb(121, 119, 255);
 }
 
 main {
     display: block;
     height: calc(100% - 120px);
+    overflow-y: auto;
 }
 
 .navbar-header {
-    height: 70px;
+    height: 90px;
 }
