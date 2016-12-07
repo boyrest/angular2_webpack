@@ -24,6 +24,8 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var article_component_1 = require("./component/form/article/article.component");
 var hero_form_component_1 = require("./component/hero/hero-form.component");
+var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
+var in_memory_data_service_1 = require("./mock/in-memory-data.service");
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent_1.HomeComponent },
@@ -43,7 +45,8 @@ RoutesDemoAppModule = __decorate([
             platform_browser_1.BrowserModule,
             router_1.RouterModule.forRoot(routes),
             forms_1.FormsModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService)
         ],
         declarations: [
             app_component_1.AppComponent,

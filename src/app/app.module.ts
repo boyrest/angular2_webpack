@@ -14,6 +14,9 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {ArticleComponent} from './component/form/article/article.component';
 import {HeroFormComponent} from './component/hero/hero-form.component';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './mock/in-memory-data.service';
+
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
@@ -28,7 +31,8 @@ const routes: Routes = [
         BrowserModule,
         RouterModule.forRoot(routes),
         FormsModule,
-        HttpModule
+        HttpModule,
+        InMemoryWebApiModule.forRoot(InMemoryDataService)
     ],
     declarations: [
         AppComponent,

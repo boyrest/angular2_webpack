@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {Hero} from '../../model/Hero';
 import {HeroService} from './hero-form.service';
 
@@ -9,7 +9,7 @@ import {HeroService} from './hero-form.service';
     providers:[HeroService]
 })
 
-export class HeroFormComponent {
+export class HeroFormComponent implements OnInit {
     powers = ['Really Smart', 'Super Flexible',
         'Super Hot', 'Weather Changer'];
     model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
@@ -21,8 +21,12 @@ export class HeroFormComponent {
     // TODO: Remove this when we're done
     get diagnostic() { return JSON.stringify(this.model); }
 
-    newHero() {
-      console.log(this.heroService.getHeroes());
+    newHero():void{
+
       this.model = new Hero(42, '', '');
+    }
+
+    ngOnInit():void{
+      console.log(this.heroService.getHeroes().then(heros=>console.log(heros)));
     }
 }
